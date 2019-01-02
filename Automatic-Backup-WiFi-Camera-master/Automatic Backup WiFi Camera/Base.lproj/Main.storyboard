@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1FM-7W-849">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2gW-h7-BPD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1FM-7W-849" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="IYF-ws-nJM" customClass="navBar" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bcp-DM-Kl0" kind="relationship" relationship="rootViewController" id="crQ-LM-7hl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dER-1m-RML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="-573"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="d7U-av-aFI">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="REV-TD-6Y3" customClass="CameraVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQF-C4-4R3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-sp-mFZ" customClass="AnimatedScrollView" customModule="AnimatedScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbB-Cr-fYD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mZ-0S-nzb" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ox-ed-2h4">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="313"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Video Feed." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSg-TT-AnP" customClass="headerLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="313" width="315" height="52"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Success to confirm." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0U-hv-T8H" customClass="middleLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="365" width="315" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the card to retry." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-vz-ZCm" customClass="italicLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="427.5" width="315" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="WSg-TT-AnP" firstAttribute="top" secondItem="7Ox-ed-2h4" secondAttribute="bottom" id="0Ht-Uq-ecB"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Ox-ed-2h4" secondAttribute="trailing" id="1u4-3q-BTS"/>
+                                            <constraint firstItem="ocb-vz-ZCm" firstAttribute="height" secondItem="7Ox-ed-2h4" secondAttribute="height" multiplier="1/10" id="3eS-Dw-DtE"/>
+                                            <constraint firstItem="ocb-vz-ZCm" firstAttribute="width" secondItem="7Ox-ed-2h4" secondAttribute="width" id="7Ts-YB-M7D"/>
+                                            <constraint firstItem="WSg-TT-AnP" firstAttribute="height" secondItem="7Ox-ed-2h4" secondAttribute="height" multiplier="1/6" id="7cp-l1-iOj"/>
+                                            <constraint firstAttribute="trailing" secondItem="WSg-TT-AnP" secondAttribute="trailing" id="GVE-UK-cia"/>
+                                            <constraint firstItem="ocb-vz-ZCm" firstAttribute="leading" secondItem="4mZ-0S-nzb" secondAttribute="leading" id="J5f-XC-OBH"/>
+                                            <constraint firstAttribute="bottom" secondItem="ocb-vz-ZCm" secondAttribute="bottom" id="M9j-YA-9j3"/>
+                                            <constraint firstItem="7Ox-ed-2h4" firstAttribute="top" secondItem="4mZ-0S-nzb" secondAttribute="top" id="PU0-5G-8MV"/>
+                                            <constraint firstItem="7Ox-ed-2h4" firstAttribute="leading" secondItem="4mZ-0S-nzb" secondAttribute="leading" id="RqV-ne-j9I"/>
+                                            <constraint firstItem="v0U-hv-T8H" firstAttribute="width" secondItem="7Ox-ed-2h4" secondAttribute="width" id="T16-SE-uJP"/>
+                                            <constraint firstItem="WSg-TT-AnP" firstAttribute="width" secondItem="7Ox-ed-2h4" secondAttribute="width" id="X6O-PF-dmG"/>
+                                            <constraint firstItem="v0U-hv-T8H" firstAttribute="top" secondItem="WSg-TT-AnP" secondAttribute="bottom" id="XK9-Xr-aQq"/>
+                                            <constraint firstItem="ocb-vz-ZCm" firstAttribute="top" secondItem="v0U-hv-T8H" secondAttribute="bottom" id="dmR-sh-eIf"/>
+                                            <constraint firstItem="v0U-hv-T8H" firstAttribute="leading" secondItem="4mZ-0S-nzb" secondAttribute="leading" id="ggx-Dc-QOz"/>
+                                            <constraint firstItem="v0U-hv-T8H" firstAttribute="height" secondItem="7Ox-ed-2h4" secondAttribute="height" multiplier="1/5" id="kZo-VN-DyE"/>
+                                            <constraint firstItem="WSg-TT-AnP" firstAttribute="leading" secondItem="4mZ-0S-nzb" secondAttribute="leading" id="kjO-pI-Sgg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ocb-vz-ZCm" secondAttribute="trailing" id="sbd-B8-eXm"/>
+                                            <constraint firstAttribute="trailing" secondItem="v0U-hv-T8H" secondAttribute="trailing" id="skH-s6-FBz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7K-sL-tP4" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-ju-s4w" customClass="roundButton" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="155.5" y="519" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="NsJ-Bt-SWl"/>
+                                            <constraint firstAttribute="height" constant="64" id="alD-PF-UTC"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_done_24_filled"/>
+                                        <connections>
+                                            <action selector="btnSuccessClicked:" destination="REV-TD-6Y3" eventType="touchUpInside" id="Yh4-di-5ca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4mZ-0S-nzb" firstAttribute="leading" secondItem="ZbB-Cr-fYD" secondAttribute="leading" constant="30" id="9i8-57-6D1"/>
+                                    <constraint firstItem="I8O-ju-s4w" firstAttribute="centerX" secondItem="ZbB-Cr-fYD" secondAttribute="centerX" id="DsA-XM-aAD"/>
+                                    <constraint firstItem="L7K-sL-tP4" firstAttribute="centerY" secondItem="4mZ-0S-nzb" secondAttribute="centerY" id="HHf-Jo-6Pa"/>
+                                    <constraint firstItem="4mZ-0S-nzb" firstAttribute="top" secondItem="ZbB-Cr-fYD" secondAttribute="top" constant="40" id="Ro0-u6-Dut"/>
+                                    <constraint firstAttribute="bottom" secondItem="I8O-ju-s4w" secondAttribute="bottom" constant="20" id="aUy-gL-MXw"/>
+                                    <constraint firstItem="L7K-sL-tP4" firstAttribute="centerX" secondItem="4mZ-0S-nzb" secondAttribute="centerX" id="fcY-nk-1AA"/>
+                                    <constraint firstAttribute="trailing" secondItem="4mZ-0S-nzb" secondAttribute="trailing" constant="30" id="mOU-H9-fJu"/>
+                                    <constraint firstItem="L7K-sL-tP4" firstAttribute="height" secondItem="4mZ-0S-nzb" secondAttribute="height" id="o1m-oa-HHn"/>
+                                    <constraint firstItem="I8O-ju-s4w" firstAttribute="top" secondItem="L7K-sL-tP4" secondAttribute="bottom" constant="20" id="x07-Yi-NWg"/>
+                                    <constraint firstItem="L7K-sL-tP4" firstAttribute="width" secondItem="4mZ-0S-nzb" secondAttribute="width" id="zcS-Gr-zld"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sSN-sp-mFZ" firstAttribute="bottom" secondItem="4RS-z5-Ife" secondAttribute="bottom" id="1N9-4t-h43"/>
+                            <constraint firstItem="sSN-sp-mFZ" firstAttribute="trailing" secondItem="4RS-z5-Ife" secondAttribute="trailing" id="5Qk-aP-0sM"/>
+                            <constraint firstItem="4RS-z5-Ife" firstAttribute="trailing" secondItem="ZbB-Cr-fYD" secondAttribute="trailing" id="P2i-tf-cr1"/>
+                            <constraint firstItem="4RS-z5-Ife" firstAttribute="bottom" secondItem="ZbB-Cr-fYD" secondAttribute="bottom" id="Po6-FE-sy5"/>
+                            <constraint firstItem="sSN-sp-mFZ" firstAttribute="top" secondItem="tQF-C4-4R3" secondAttribute="top" id="ROP-Jr-NqC"/>
+                            <constraint firstItem="sSN-sp-mFZ" firstAttribute="leading" secondItem="4RS-z5-Ife" secondAttribute="leading" id="iHh-ay-QdD"/>
+                            <constraint firstItem="ZbB-Cr-fYD" firstAttribute="leading" secondItem="4RS-z5-Ife" secondAttribute="leading" id="xTO-q2-f2e"/>
+                            <constraint firstItem="ZbB-Cr-fYD" firstAttribute="top" secondItem="4RS-z5-Ife" secondAttribute="top" id="xbb-hR-MJs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4RS-z5-Ife"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bO0-We-5BA"/>
+                    <connections>
+                        <outlet property="animatedScroll" destination="sSN-sp-mFZ" id="GgR-Zy-gXO"/>
+                        <outlet property="btnNext" destination="I8O-ju-s4w" id="Yge-cZ-xYB"/>
+                        <outlet property="cardBackView" destination="4mZ-0S-nzb" id="GTx-SR-qJr"/>
+                        <outlet property="cardView" destination="L7K-sL-tP4" id="FDB-tk-tlm"/>
+                        <outlet property="imgView" destination="7Ox-ed-2h4" id="2KH-Pt-f4L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dE3-r4-6Nw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3505" y="116"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="Vpr-Ia-CeB">
+            <objects>
+                <viewController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" id="NUf-3a-CA0" customClass="HomeVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lff-OE-grE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enj-OA-5e8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-ok-Q6v" customClass="tabbar" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="547" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="hLJ-NQ-YCY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-hm-Cp2" customClass="roundButtonHome" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="291" y="463" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="AdY-lY-524"/>
+                                    <constraint firstAttribute="width" constant="64" id="uoe-OM-TSO"/>
+                                </constraints>
+                                <state key="normal" image="ic_video_24_filled"/>
+                                <connections>
+                                    <action selector="cameraClicked:" destination="NUf-3a-CA0" eventType="touchUpInside" id="AXy-a3-BuJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BSh-6T-AX5" firstAttribute="trailing" secondItem="1MO-hm-Cp2" secondAttribute="trailing" constant="20" id="Nq9-Fa-tjA"/>
+                            <constraint firstItem="dXP-ok-Q6v" firstAttribute="trailing" secondItem="BSh-6T-AX5" secondAttribute="trailing" id="PKr-mt-EnX"/>
+                            <constraint firstItem="dXP-ok-Q6v" firstAttribute="leading" secondItem="BSh-6T-AX5" secondAttribute="leading" id="Xlq-ih-zlq"/>
+                            <constraint firstItem="BSh-6T-AX5" firstAttribute="trailing" secondItem="enj-OA-5e8" secondAttribute="trailing" id="XoF-Ld-jUc"/>
+                            <constraint firstItem="enj-OA-5e8" firstAttribute="top" secondItem="BSh-6T-AX5" secondAttribute="top" id="ekU-CB-DKK"/>
+                            <constraint firstItem="dXP-ok-Q6v" firstAttribute="bottom" secondItem="BSh-6T-AX5" secondAttribute="bottom" id="hGQ-l6-uRQ"/>
+                            <constraint firstItem="dXP-ok-Q6v" firstAttribute="top" secondItem="1MO-hm-Cp2" secondAttribute="bottom" constant="20" id="r99-Z2-PNE"/>
+                            <constraint firstItem="enj-OA-5e8" firstAttribute="leading" secondItem="BSh-6T-AX5" secondAttribute="leading" id="soh-q2-uqT"/>
+                            <constraint firstItem="dXP-ok-Q6v" firstAttribute="top" secondItem="enj-OA-5e8" secondAttribute="bottom" id="vqM-cu-ydu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BSh-6T-AX5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FxN-Qz-hrv">
+                        <barButtonItem key="backBarButtonItem" title=" " id="UGs-af-OOC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="enj-OA-5e8" id="taX-ue-ebO"/>
+                        <outlet property="navBar" destination="dXP-ok-Q6v" id="euB-Yn-Ad9"/>
+                        <outlet property="videoButton" destination="1MO-hm-Cp2" id="bru-Mi-Pkq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpG-ai-MsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4144.8000000000002" y="115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XVR-ST-qQW">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TvY-Y9-HwY" customClass="navigationController" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dZb-89-Bmi" customClass="navBarHome" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NUf-3a-CA0" kind="relationship" relationship="rootViewController" id="fXe-H1-kUc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGs-Jz-3M2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4145" y="-573"/>
+        </scene>
+        <!--Connect Wi FiVC-->
+        <scene sceneID="Pyt-Vg-987">
+            <objects>
+                <viewController storyboardIdentifier="ConnectWiFiVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nqH-Uc-8wH" customClass="ConnectWiFiVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLC-rg-4AT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-tp-XjA" customClass="AnimatedScrollView" customModule="AnimatedScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvO-xH-4XQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dec-Ph-wVV" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_small.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vdb-CK-h5z">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="313"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Join on WiFi Prompt." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dn-3P-1Cb" customClass="headerLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="313" width="315" height="52"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If connection fails, an error should pop up." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jR-lX-EfN" customClass="middleLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="365" width="315" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the card to retry." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlT-uC-SDZ" customClass="italicLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="427.5" width="315" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3Dn-3P-1Cb" firstAttribute="height" secondItem="Vdb-CK-h5z" secondAttribute="height" multiplier="1/6" id="1wp-lJ-6NG"/>
+                                            <constraint firstItem="VlT-uC-SDZ" firstAttribute="top" secondItem="1jR-lX-EfN" secondAttribute="bottom" id="4jF-Yc-JMd"/>
+                                            <constraint firstItem="3Dn-3P-1Cb" firstAttribute="leading" secondItem="Dec-Ph-wVV" secondAttribute="leading" id="7OH-px-dRv"/>
+                                            <constraint firstItem="Vdb-CK-h5z" firstAttribute="leading" secondItem="Dec-Ph-wVV" secondAttribute="leading" id="D5d-9l-XKf"/>
+                                            <constraint firstAttribute="trailing" secondItem="1jR-lX-EfN" secondAttribute="trailing" id="DhA-tL-yma"/>
+                                            <constraint firstAttribute="bottom" secondItem="VlT-uC-SDZ" secondAttribute="bottom" id="EYp-wM-rdp"/>
+                                            <constraint firstItem="Vdb-CK-h5z" firstAttribute="top" secondItem="Dec-Ph-wVV" secondAttribute="top" id="GVV-Ph-ZVY"/>
+                                            <constraint firstAttribute="trailing" secondItem="VlT-uC-SDZ" secondAttribute="trailing" id="LCx-KZ-DZ8"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Dn-3P-1Cb" secondAttribute="trailing" id="PMh-QK-nhB"/>
+                                            <constraint firstItem="VlT-uC-SDZ" firstAttribute="width" secondItem="Vdb-CK-h5z" secondAttribute="width" id="VQm-9L-pJI"/>
+                                            <constraint firstItem="1jR-lX-EfN" firstAttribute="leading" secondItem="Dec-Ph-wVV" secondAttribute="leading" id="aTq-7e-mpm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vdb-CK-h5z" secondAttribute="trailing" id="bll-pM-6hn"/>
+                                            <constraint firstItem="3Dn-3P-1Cb" firstAttribute="top" secondItem="Vdb-CK-h5z" secondAttribute="bottom" id="jMC-vk-e2O"/>
+                                            <constraint firstItem="1jR-lX-EfN" firstAttribute="height" secondItem="Vdb-CK-h5z" secondAttribute="height" multiplier="1/5" id="laE-iT-747"/>
+                                            <constraint firstItem="3Dn-3P-1Cb" firstAttribute="width" secondItem="Vdb-CK-h5z" secondAttribute="width" id="oOY-VZ-VAD"/>
+                                            <constraint firstItem="VlT-uC-SDZ" firstAttribute="leading" secondItem="Dec-Ph-wVV" secondAttribute="leading" id="rMt-O8-r3t"/>
+                                            <constraint firstItem="1jR-lX-EfN" firstAttribute="width" secondItem="Vdb-CK-h5z" secondAttribute="width" id="wDk-it-OZY"/>
+                                            <constraint firstItem="VlT-uC-SDZ" firstAttribute="height" secondItem="Vdb-CK-h5z" secondAttribute="height" multiplier="1/10" id="wzQ-z9-s4H"/>
+                                            <constraint firstItem="1jR-lX-EfN" firstAttribute="top" secondItem="3Dn-3P-1Cb" secondAttribute="bottom" id="z0f-fO-jDx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hJ-jq-GiS" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-42-C6t" customClass="roundButtonHome" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="155.5" y="519" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="MyS-bW-zg7"/>
+                                            <constraint firstAttribute="width" constant="64" id="r5Z-Ps-N2p"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_arrow_24_filled"/>
+                                        <connections>
+                                            <action selector="btnSuccessClicked:" destination="nqH-Uc-8wH" eventType="touchUpInside" id="6LB-QJ-Tov"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1hJ-jq-GiS" firstAttribute="centerX" secondItem="Dec-Ph-wVV" secondAttribute="centerX" id="0OZ-og-ttm"/>
+                                    <constraint firstItem="1hJ-jq-GiS" firstAttribute="height" secondItem="Dec-Ph-wVV" secondAttribute="height" id="7eh-LW-hM9"/>
+                                    <constraint firstItem="4tK-42-C6t" firstAttribute="centerX" secondItem="SvO-xH-4XQ" secondAttribute="centerX" id="Q5C-ly-2Cw"/>
+                                    <constraint firstItem="4tK-42-C6t" firstAttribute="top" secondItem="1hJ-jq-GiS" secondAttribute="bottom" constant="20" id="TLI-KH-ZFj"/>
+                                    <constraint firstItem="Dec-Ph-wVV" firstAttribute="leading" secondItem="SvO-xH-4XQ" secondAttribute="leading" constant="30" id="VVk-0b-12P"/>
+                                    <constraint firstAttribute="bottom" secondItem="4tK-42-C6t" secondAttribute="bottom" constant="20" id="Xd2-Uq-tWf"/>
+                                    <constraint firstItem="Dec-Ph-wVV" firstAttribute="top" secondItem="SvO-xH-4XQ" secondAttribute="top" constant="40" id="Zhf-pd-7OY"/>
+                                    <constraint firstItem="1hJ-jq-GiS" firstAttribute="width" secondItem="Dec-Ph-wVV" secondAttribute="width" id="gLM-tn-MWu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dec-Ph-wVV" secondAttribute="trailing" constant="30" id="j9A-vG-xKo"/>
+                                    <constraint firstItem="1hJ-jq-GiS" firstAttribute="centerY" secondItem="Dec-Ph-wVV" secondAttribute="centerY" id="nUM-bl-2tc"/>
+                                    <constraint firstAttribute="bottom" secondItem="1hJ-jq-GiS" secondAttribute="bottom" priority="750" constant="40" id="oxf-Gi-jlK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SvO-xH-4XQ" firstAttribute="leading" secondItem="p1a-ve-V8t" secondAttribute="leading" id="7qY-gg-2tv"/>
+                            <constraint firstItem="p1a-ve-V8t" firstAttribute="trailing" secondItem="SvO-xH-4XQ" secondAttribute="trailing" id="EJq-Ee-n8T"/>
+                            <constraint firstItem="5lU-tp-XjA" firstAttribute="leading" secondItem="p1a-ve-V8t" secondAttribute="leading" id="MmT-Cn-v9p"/>
+                            <constraint firstItem="5lU-tp-XjA" firstAttribute="trailing" secondItem="p1a-ve-V8t" secondAttribute="trailing" id="c10-GD-FuA"/>
+                            <constraint firstItem="5lU-tp-XjA" firstAttribute="top" secondItem="iLC-rg-4AT" secondAttribute="top" id="c5b-jV-cqk"/>
+                            <constraint firstItem="SvO-xH-4XQ" firstAttribute="top" secondItem="p1a-ve-V8t" secondAttribute="top" id="hI8-Qj-m7i"/>
+                            <constraint firstItem="p1a-ve-V8t" firstAttribute="bottom" secondItem="SvO-xH-4XQ" secondAttribute="bottom" id="sK0-2J-t5E"/>
+                            <constraint firstItem="5lU-tp-XjA" firstAttribute="bottom" secondItem="p1a-ve-V8t" secondAttribute="bottom" id="vDP-om-avL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p1a-ve-V8t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k55-q8-1z0"/>
+                    <connections>
+                        <outlet property="animatedScroll" destination="5lU-tp-XjA" id="sbn-kI-brC"/>
+                        <outlet property="bottomConst" destination="TLI-KH-ZFj" id="XIW-P2-eCf"/>
+                        <outlet property="btnNext" destination="4tK-42-C6t" id="yoD-Cc-rQV"/>
+                        <outlet property="cardBackView" destination="Dec-Ph-wVV" id="9nV-wN-2hS"/>
+                        <outlet property="cardView" destination="1hJ-jq-GiS" id="QWT-3f-Mrq"/>
+                        <outlet property="lblItalic" destination="VlT-uC-SDZ" id="A4O-IG-Jg5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZ3-Nd-Eo8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860" y="115.59220389805098"/>
+        </scene>
+        <!--StreamVC-->
+        <scene sceneID="SId-fU-4ru">
+            <objects>
+                <viewController storyboardIdentifier="StreamVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FzU-U0-Q42" customClass="StreamVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57X-H7-gDw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-RY-ZXh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wkr-yD-Yh0" appends="YES" id="87n-aw-WQW"/>
+                                </connections>
+                            </imageView>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZA-O8-1Hm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfg-5c-Vud">
+                                <rect key="frame" x="20" y="223.5" width="335" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="xuL-4O-LRv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-19-ecE">
+                                <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2Wg-GW-QDw"/>
+                                    <constraint firstAttribute="height" constant="60" id="LBI-wF-FRr"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aZA-O8-1Hm" firstAttribute="leading" secondItem="57X-H7-gDw" secondAttribute="leading" id="GuI-4g-Ueb"/>
+                            <constraint firstItem="igO-u7-hpv" firstAttribute="trailing" secondItem="nfg-5c-Vud" secondAttribute="trailing" constant="20" id="Ix9-cU-g5D"/>
+                            <constraint firstAttribute="trailing" secondItem="8Wd-RY-ZXh" secondAttribute="trailing" id="OPz-v4-3Gr"/>
+                            <constraint firstItem="xcO-19-ecE" firstAttribute="top" secondItem="nfg-5c-Vud" secondAttribute="bottom" id="YRt-j5-aI0"/>
+                            <constraint firstItem="xcO-19-ecE" firstAttribute="centerX" secondItem="57X-H7-gDw" secondAttribute="centerX" id="ZnJ-gf-Jd0"/>
+                            <constraint firstAttribute="bottom" secondItem="aZA-O8-1Hm" secondAttribute="bottom" id="ceI-tJ-XeS"/>
+                            <constraint firstAttribute="trailing" secondItem="aZA-O8-1Hm" secondAttribute="trailing" id="dQJ-JK-eb5"/>
+                            <constraint firstAttribute="bottom" secondItem="8Wd-RY-ZXh" secondAttribute="bottom" id="dwO-Xc-En1"/>
+                            <constraint firstItem="nfg-5c-Vud" firstAttribute="leading" secondItem="igO-u7-hpv" secondAttribute="leading" constant="20" id="gcD-MI-nqS"/>
+                            <constraint firstItem="8Wd-RY-ZXh" firstAttribute="leading" secondItem="57X-H7-gDw" secondAttribute="leading" id="hC8-J1-uAh"/>
+                            <constraint firstItem="xcO-19-ecE" firstAttribute="centerY" secondItem="57X-H7-gDw" secondAttribute="centerY" id="lD2-7M-600"/>
+                            <constraint firstItem="8Wd-RY-ZXh" firstAttribute="top" secondItem="57X-H7-gDw" secondAttribute="top" id="lSH-wo-PW7"/>
+                            <constraint firstItem="aZA-O8-1Hm" firstAttribute="top" secondItem="57X-H7-gDw" secondAttribute="top" id="v9p-YQ-qNA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="igO-u7-hpv"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="nfg-5c-Vud" id="79L-mb-lUj"/>
+                        <outlet property="alertView" destination="aZA-O8-1Hm" id="coE-tE-fd4"/>
+                        <outlet property="btnRotate" destination="xcO-19-ecE" id="X1K-ar-y3Y"/>
+                        <outlet property="imgView" destination="8Wd-RY-ZXh" id="d1q-Jk-DNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-js-k6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wkr-yD-Yh0">
+                    <connections>
+                        <action selector="imageTapped:" destination="FzU-U0-Q42" id="Nzw-d4-fLP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4144.8000000000002" y="810.94452773613204"/>
+        </scene>
+        <!--WELCOME-->
+        <scene sceneID="PbD-uh-gk1">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bcp-DM-Kl0" customClass="WelcomeVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLn-cE-KIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-eP-X3B" customClass="AnimatedScrollView" customModule="AnimatedScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBI-d9-ALI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-O2-KcC" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_small.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-2y-Lc6">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="320"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automatic Backup WiFi Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-z0-N74" customClass="headerLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="320" width="315" height="53.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get you setup." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok0-tn-TO7" customClass="middleLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="373.5" width="315" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On next screen, you'll be asked to connect to the network." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zll-8n-XJY" customClass="italicLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="413.5" width="315" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dJS-2y-Lc6" firstAttribute="top" secondItem="M2s-O2-KcC" secondAttribute="top" id="0gN-9c-sKZ"/>
+                                            <constraint firstItem="lD9-z0-N74" firstAttribute="leading" secondItem="M2s-O2-KcC" secondAttribute="leading" id="9B3-bV-fMY"/>
+                                            <constraint firstItem="ok0-tn-TO7" firstAttribute="top" secondItem="lD9-z0-N74" secondAttribute="bottom" id="Bg6-kJ-cRB"/>
+                                            <constraint firstItem="Zll-8n-XJY" firstAttribute="leading" secondItem="M2s-O2-KcC" secondAttribute="leading" id="Fe5-TD-1iS"/>
+                                            <constraint firstItem="lD9-z0-N74" firstAttribute="height" secondItem="dJS-2y-Lc6" secondAttribute="height" multiplier="1/6" id="GBP-IZ-RJr"/>
+                                            <constraint firstItem="Zll-8n-XJY" firstAttribute="height" secondItem="dJS-2y-Lc6" secondAttribute="height" multiplier="1/7" id="GdB-eF-QIs"/>
+                                            <constraint firstItem="dJS-2y-Lc6" firstAttribute="leading" secondItem="M2s-O2-KcC" secondAttribute="leading" id="IzL-5L-47u"/>
+                                            <constraint firstAttribute="trailing" secondItem="lD9-z0-N74" secondAttribute="trailing" id="LhX-9R-7ka"/>
+                                            <constraint firstItem="ok0-tn-TO7" firstAttribute="width" secondItem="dJS-2y-Lc6" secondAttribute="width" id="UxN-yE-Okx"/>
+                                            <constraint firstItem="ok0-tn-TO7" firstAttribute="height" secondItem="dJS-2y-Lc6" secondAttribute="height" multiplier="1/8" id="W4s-jN-qzN"/>
+                                            <constraint firstItem="lD9-z0-N74" firstAttribute="width" secondItem="dJS-2y-Lc6" secondAttribute="width" id="YRK-Di-RKH"/>
+                                            <constraint firstAttribute="trailing" secondItem="ok0-tn-TO7" secondAttribute="trailing" id="ZVg-GR-B4V"/>
+                                            <constraint firstItem="lD9-z0-N74" firstAttribute="top" secondItem="dJS-2y-Lc6" secondAttribute="bottom" id="bNu-hn-hao"/>
+                                            <constraint firstItem="Zll-8n-XJY" firstAttribute="top" secondItem="ok0-tn-TO7" secondAttribute="bottom" id="eSa-bV-tyz"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zll-8n-XJY" secondAttribute="bottom" id="elX-VR-m5S"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zll-8n-XJY" secondAttribute="trailing" id="ffN-EC-Whx"/>
+                                            <constraint firstItem="ok0-tn-TO7" firstAttribute="leading" secondItem="M2s-O2-KcC" secondAttribute="leading" id="u1P-MH-gLX"/>
+                                            <constraint firstAttribute="trailing" secondItem="dJS-2y-Lc6" secondAttribute="trailing" id="v67-4h-A1H"/>
+                                            <constraint firstItem="Zll-8n-XJY" firstAttribute="width" secondItem="dJS-2y-Lc6" secondAttribute="width" id="xR8-99-1uR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-rf-jvq" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="459"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-GT-uqs" customClass="roundButton" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="155.5" y="519" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="FirstButton" label="FirstButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="3Y4-Lk-S4r"/>
+                                            <constraint firstAttribute="width" constant="64" id="DJP-29-w9M"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_arrow_24_filled"/>
+                                        <connections>
+                                            <action selector="btnSuccessClicked:" destination="bcp-DM-Kl0" eventType="touchUpInside" id="BtV-8C-7lv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="G5B-rf-jvq" firstAttribute="centerY" secondItem="M2s-O2-KcC" secondAttribute="centerY" id="4Mi-87-MqG"/>
+                                    <constraint firstAttribute="bottom" secondItem="vSv-GT-uqs" secondAttribute="bottom" constant="20" id="DgV-sG-PLt"/>
+                                    <constraint firstItem="G5B-rf-jvq" firstAttribute="width" secondItem="M2s-O2-KcC" secondAttribute="width" id="TF8-Yj-yyH"/>
+                                    <constraint firstItem="M2s-O2-KcC" firstAttribute="top" secondItem="OBI-d9-ALI" secondAttribute="top" constant="40" id="UN1-XJ-JOM"/>
+                                    <constraint firstAttribute="trailing" secondItem="M2s-O2-KcC" secondAttribute="trailing" constant="30" id="cjT-bb-GE0"/>
+                                    <constraint firstItem="G5B-rf-jvq" firstAttribute="height" secondItem="M2s-O2-KcC" secondAttribute="height" id="pMu-Qr-meg"/>
+                                    <constraint firstItem="G5B-rf-jvq" firstAttribute="centerX" secondItem="M2s-O2-KcC" secondAttribute="centerX" id="se0-4b-yVy"/>
+                                    <constraint firstItem="M2s-O2-KcC" firstAttribute="leading" secondItem="OBI-d9-ALI" secondAttribute="leading" constant="30" id="tOv-a6-9eH"/>
+                                    <constraint firstItem="vSv-GT-uqs" firstAttribute="centerX" secondItem="OBI-d9-ALI" secondAttribute="centerX" id="vOt-Oa-KSO"/>
+                                    <constraint firstItem="vSv-GT-uqs" firstAttribute="top" secondItem="G5B-rf-jvq" secondAttribute="bottom" constant="20" id="waE-45-dFQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d3o-eP-X3B" firstAttribute="top" secondItem="pLn-cE-KIo" secondAttribute="top" id="91q-Pu-rUD"/>
+                            <constraint firstItem="d3o-eP-X3B" firstAttribute="leading" secondItem="Cfn-Ih-Fat" secondAttribute="leading" id="CFD-PU-zEj"/>
+                            <constraint firstItem="Cfn-Ih-Fat" firstAttribute="trailing" secondItem="OBI-d9-ALI" secondAttribute="trailing" id="LLB-25-rsd"/>
+                            <constraint firstItem="d3o-eP-X3B" firstAttribute="trailing" secondItem="Cfn-Ih-Fat" secondAttribute="trailing" id="MlQ-0p-vQ2"/>
+                            <constraint firstItem="Cfn-Ih-Fat" firstAttribute="bottom" secondItem="OBI-d9-ALI" secondAttribute="bottom" id="Sv7-Gl-3Mq"/>
+                            <constraint firstItem="OBI-d9-ALI" firstAttribute="top" secondItem="Cfn-Ih-Fat" secondAttribute="top" id="jqB-NS-KpO"/>
+                            <constraint firstItem="d3o-eP-X3B" firstAttribute="bottom" secondItem="Cfn-Ih-Fat" secondAttribute="bottom" id="pxb-V2-O6b"/>
+                            <constraint firstItem="OBI-d9-ALI" firstAttribute="leading" secondItem="Cfn-Ih-Fat" secondAttribute="leading" id="quF-4A-Bda"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cfn-Ih-Fat"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WELCOME" id="Q9D-eB-TUu"/>
+                    <connections>
+                        <outlet property="animatedScroll" destination="d3o-eP-X3B" id="dbX-h6-5PV"/>
+                        <outlet property="btnSuccess" destination="vSv-GT-uqs" id="9IR-h1-WH3"/>
+                        <outlet property="cardBackView" destination="M2s-O2-KcC" id="1Uz-0u-dad"/>
+                        <outlet property="cardView" destination="G5B-rf-jvq" id="dDh-yC-jNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hr-A6-xF5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rDR-5u-qAb">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController0" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="980-zA-f86" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9g0-YU-geB" customClass="navBarHome" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nqH-Uc-8wH" kind="relationship" relationship="rootViewController" id="RDT-qo-yDE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-2O-F7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860" y="-573"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q2n-nj-HBl">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController1" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rlH-e3-cqt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="N2Z-JX-GZO" customClass="navBar" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="REV-TD-6Y3" kind="relationship" relationship="rootViewController" id="Pc7-y8-WuT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKp-8b-D3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3505" y="-573"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="yvL-pG-xev">
+            <objects>
+                <viewController restorationIdentifier="SettingsVC" storyboardIdentifier="SettingsVC" id="4AR-KK-KxD" customClass="SettingsVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4O-1d-sC6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN8-3x-TE2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="io9-4d-NS3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="k3y-mJ-gid">
+                                            <rect key="frame" x="0.0" y="72" width="375" height="1"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8sK-BR-e7N">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8sK-BR-e7N" id="aFx-KB-dOI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="4AR-KK-KxD" id="X79-rQ-w0Q"/>
+                                            <outlet property="delegate" destination="4AR-KK-KxD" id="80H-Go-Lcb"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="io9-4d-NS3" firstAttribute="top" secondItem="SN8-3x-TE2" secondAttribute="top" id="3RM-A0-pCJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="io9-4d-NS3" secondAttribute="bottom" id="VB4-fu-0HJ"/>
+                                    <constraint firstItem="io9-4d-NS3" firstAttribute="leading" secondItem="SN8-3x-TE2" secondAttribute="leading" id="hOA-Jm-nui"/>
+                                    <constraint firstAttribute="trailing" secondItem="io9-4d-NS3" secondAttribute="trailing" id="xdu-f6-B0C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SN8-3x-TE2" firstAttribute="leading" secondItem="asV-DR-O4j" secondAttribute="leading" id="16W-gB-nNl"/>
+                            <constraint firstItem="SN8-3x-TE2" firstAttribute="top" secondItem="asV-DR-O4j" secondAttribute="top" id="7tR-3F-Otl"/>
+                            <constraint firstItem="asV-DR-O4j" firstAttribute="trailing" secondItem="SN8-3x-TE2" secondAttribute="trailing" id="qHx-40-Fk0"/>
+                            <constraint firstItem="asV-DR-O4j" firstAttribute="bottom" secondItem="SN8-3x-TE2" secondAttribute="bottom" id="wel-Vw-PpJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="asV-DR-O4j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dRv-qh-gPW"/>
+                    <connections>
+                        <outlet property="tblView" destination="io9-4d-NS3" id="Esj-Cv-PYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyM-bp-hcK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5500" y="116"/>
+        </scene>
+        <!--Submit ReportVC-->
+        <scene sceneID="OIs-ax-yq9">
+            <objects>
+                <viewController restorationIdentifier="SubmitReportVC" storyboardIdentifier="SubmitReportVC" id="E53-e4-P4C" customClass="SubmitReportVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Je-wS-Swk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-1s-rub" customClass="floatText" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="20" y="40" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.89411764709999997" green="0.18039215689999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BRr-Yq-HXd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="expandsOnOverflow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="FULL NAME"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGL-e6-7S4" customClass="floatText" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="20" y="110" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.89411764709999997" green="0.18039215689999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vx5-55-xZ7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="expandsOnOverflow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="EMAIL"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lg-c6-uqf" customClass="floatText" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="20" y="180" width="335" height="150"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.89411764709999997" green="0.18039215689999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="SCJ-Y4-LK1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="expandsOnOverflow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="MESSAGE"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kso-8a-U2H" customClass="roundButtonHome" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                <rect key="frame" x="155.5" y="583" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="PCb-bX-cte"/>
+                                    <constraint firstAttribute="height" constant="64" id="aAb-ra-5bN"/>
+                                </constraints>
+                                <state key="normal" image="ic_done_24_filled"/>
+                                <connections>
+                                    <action selector="btnSuccessClicked:" destination="E53-e4-P4C" eventType="touchUpInside" id="DMT-f8-Z6q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N8U-Tn-UhE" firstAttribute="trailing" secondItem="VGL-e6-7S4" secondAttribute="trailing" constant="20" id="05U-WJ-vFn"/>
+                            <constraint firstItem="7lg-c6-uqf" firstAttribute="leading" secondItem="N8U-Tn-UhE" secondAttribute="leading" constant="20" id="24b-wI-Pl0"/>
+                            <constraint firstItem="N8U-Tn-UhE" firstAttribute="bottom" secondItem="kso-8a-U2H" secondAttribute="bottom" constant="20" id="5nc-g9-g2i"/>
+                            <constraint firstItem="6IS-1s-rub" firstAttribute="leading" secondItem="N8U-Tn-UhE" secondAttribute="leading" constant="20" id="9gv-Bx-jLz"/>
+                            <constraint firstItem="VGL-e6-7S4" firstAttribute="leading" secondItem="N8U-Tn-UhE" secondAttribute="leading" constant="20" id="C1H-B9-97N"/>
+                            <constraint firstItem="6IS-1s-rub" firstAttribute="top" secondItem="N8U-Tn-UhE" secondAttribute="top" constant="20" id="MzZ-AA-d6i"/>
+                            <constraint firstItem="VGL-e6-7S4" firstAttribute="top" secondItem="6IS-1s-rub" secondAttribute="bottom" constant="20" id="Qx2-l2-vYm"/>
+                            <constraint firstItem="7lg-c6-uqf" firstAttribute="top" secondItem="VGL-e6-7S4" secondAttribute="bottom" constant="20" id="XvZ-C5-gNo"/>
+                            <constraint firstItem="N8U-Tn-UhE" firstAttribute="trailing" secondItem="7lg-c6-uqf" secondAttribute="trailing" constant="20" id="ZAb-D4-GaT"/>
+                            <constraint firstItem="N8U-Tn-UhE" firstAttribute="trailing" secondItem="6IS-1s-rub" secondAttribute="trailing" constant="20" id="cPv-vX-k1w"/>
+                            <constraint firstItem="kso-8a-U2H" firstAttribute="centerX" secondItem="0Je-wS-Swk" secondAttribute="centerX" id="sxW-I6-ViO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N8U-Tn-UhE"/>
+                    </view>
+                    <connections>
+                        <outlet property="Message" destination="7lg-c6-uqf" id="LuC-kB-J5C"/>
+                        <outlet property="btnSubmit" destination="kso-8a-U2H" id="Nx8-gU-LCG"/>
+                        <outlet property="email" destination="VGL-e6-7S4" id="KyU-Vp-bP6"/>
+                        <outlet property="fullName" destination="6IS-1s-rub" id="fab-Qq-SuB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9P4-XZ-JWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6156" y="116"/>
+        </scene>
+        <!--WELCOME-->
+        <scene sceneID="4NO-xZ-Q9g">
+            <objects>
+                <viewController restorationIdentifier="HomeViewVC" storyboardIdentifier="HomeViewVC" id="pY9-ON-IzX" customClass="HomeViewVC" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNT-LC-WQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozi-lh-2hS" customClass="AnimatedScrollView" customModule="AnimatedScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-j9-cN3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3A-uW-4p9" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="567"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_small.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xm5-nt-49X">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="422"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automatic Backup WiFi Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-fi-ND9" customClass="headerLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="422" width="315" height="60.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoR-xF-lGZ" customClass="middleLabel" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="482.5" width="315" height="84.5"/>
+                                                <string key="text">Last accessed: 
+MM/DD/YYYY @ 11:11 PM</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="MoR-xF-lGZ" firstAttribute="top" secondItem="vfe-fi-ND9" secondAttribute="bottom" id="19b-cA-jW6"/>
+                                            <constraint firstItem="vfe-fi-ND9" firstAttribute="height" secondItem="xm5-nt-49X" secondAttribute="height" multiplier="1/7" id="2rF-GR-JnF"/>
+                                            <constraint firstItem="vfe-fi-ND9" firstAttribute="leading" secondItem="W3A-uW-4p9" secondAttribute="leading" id="AXD-bv-rmT"/>
+                                            <constraint firstItem="vfe-fi-ND9" firstAttribute="top" secondItem="xm5-nt-49X" secondAttribute="bottom" id="CfI-ng-m6p"/>
+                                            <constraint firstItem="vfe-fi-ND9" firstAttribute="width" secondItem="xm5-nt-49X" secondAttribute="width" id="K2k-3o-BtO"/>
+                                            <constraint firstAttribute="bottom" secondItem="MoR-xF-lGZ" secondAttribute="bottom" id="NXw-z2-jhG"/>
+                                            <constraint firstItem="MoR-xF-lGZ" firstAttribute="height" secondItem="xm5-nt-49X" secondAttribute="height" multiplier="1/5" id="O5x-ZD-U87"/>
+                                            <constraint firstItem="MoR-xF-lGZ" firstAttribute="width" secondItem="xm5-nt-49X" secondAttribute="width" id="OAH-vH-f3r"/>
+                                            <constraint firstItem="xm5-nt-49X" firstAttribute="top" secondItem="W3A-uW-4p9" secondAttribute="top" id="Tgu-F5-xEU"/>
+                                            <constraint firstItem="MoR-xF-lGZ" firstAttribute="leading" secondItem="W3A-uW-4p9" secondAttribute="leading" id="bU0-oo-26j"/>
+                                            <constraint firstItem="xm5-nt-49X" firstAttribute="leading" secondItem="W3A-uW-4p9" secondAttribute="leading" id="eIU-fJ-RU9"/>
+                                            <constraint firstAttribute="trailing" secondItem="xm5-nt-49X" secondAttribute="trailing" id="eLU-Uh-7lW"/>
+                                            <constraint firstAttribute="trailing" secondItem="MoR-xF-lGZ" secondAttribute="trailing" id="fTj-Cx-TAs"/>
+                                            <constraint firstAttribute="trailing" secondItem="vfe-fi-ND9" secondAttribute="trailing" id="poT-MS-VEQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-Mi-yUK" customClass="cardView" customModule="Automatic_Backup_WiFi_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="40" width="315" height="567"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UVp-Mi-yUK" firstAttribute="width" secondItem="W3A-uW-4p9" secondAttribute="width" id="4bp-1A-9A1"/>
+                                    <constraint firstItem="UVp-Mi-yUK" firstAttribute="centerX" secondItem="W3A-uW-4p9" secondAttribute="centerX" id="63C-1C-FpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="W3A-uW-4p9" secondAttribute="trailing" constant="30" id="MDh-KT-UXm"/>
+                                    <constraint firstItem="W3A-uW-4p9" firstAttribute="leading" secondItem="ye5-j9-cN3" secondAttribute="leading" constant="30" id="Orn-2M-baL"/>
+                                    <constraint firstItem="UVp-Mi-yUK" firstAttribute="height" secondItem="W3A-uW-4p9" secondAttribute="height" id="bXj-NT-bbm"/>
+                                    <constraint firstItem="W3A-uW-4p9" firstAttribute="top" secondItem="ye5-j9-cN3" secondAttribute="top" constant="40" id="ieC-Uk-GlN"/>
+                                    <constraint firstAttribute="bottom" secondItem="W3A-uW-4p9" secondAttribute="bottom" constant="40" id="kqx-tm-zO7"/>
+                                    <constraint firstItem="UVp-Mi-yUK" firstAttribute="centerY" secondItem="W3A-uW-4p9" secondAttribute="centerY" id="x3p-J5-6Nw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ozi-lh-2hS" firstAttribute="leading" secondItem="oCd-N5-WsS" secondAttribute="leading" id="0X7-MK-TSv"/>
+                            <constraint firstItem="Ozi-lh-2hS" firstAttribute="top" secondItem="MNT-LC-WQa" secondAttribute="top" id="2eA-jh-rZf"/>
+                            <constraint firstItem="oCd-N5-WsS" firstAttribute="trailing" secondItem="ye5-j9-cN3" secondAttribute="trailing" id="DbD-0O-nb1"/>
+                            <constraint firstItem="Ozi-lh-2hS" firstAttribute="bottom" secondItem="MNT-LC-WQa" secondAttribute="bottom" id="aYs-pF-4lD"/>
+                            <constraint firstItem="ye5-j9-cN3" firstAttribute="top" secondItem="oCd-N5-WsS" secondAttribute="top" id="bol-zr-j4P"/>
+                            <constraint firstItem="oCd-N5-WsS" firstAttribute="bottom" secondItem="ye5-j9-cN3" secondAttribute="bottom" id="dAO-qW-dPo"/>
+                            <constraint firstItem="Ozi-lh-2hS" firstAttribute="trailing" secondItem="oCd-N5-WsS" secondAttribute="trailing" id="iEx-GE-ai6"/>
+                            <constraint firstItem="ye5-j9-cN3" firstAttribute="leading" secondItem="oCd-N5-WsS" secondAttribute="leading" id="z8D-Lu-JoR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oCd-N5-WsS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WELCOME" id="A9f-sE-OoX"/>
+                    <connections>
+                        <outlet property="animatedScroll" destination="Ozi-lh-2hS" id="GtR-u6-m27"/>
+                        <outlet property="cardBackView" destination="W3A-uW-4p9" id="P3G-P8-UDd"/>
+                        <outlet property="cardView" destination="UVp-Mi-yUK" id="FGJ-ZZ-Xzt"/>
+                        <outlet property="lblDate" destination="MoR-xF-lGZ" id="enP-n9-dyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8K-OH-ko6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4817" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_arrow_24_filled" width="24" height="24"/>
+        <image name="ic_done_24_filled" width="24" height="24"/>
+        <image name="ic_video_24_filled" width="24" height="24"/>
+        <image name="icon_small.jpg" width="1024" height="1024"/>
+    </resources>
+</document>

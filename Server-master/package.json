@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "author": "Shivang Dave",
+  "license": "ISC",
+  "dependencies": {
+    "apn": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5",
+    "npm": "^6.2.0",
+    "npmlog": "^4.1.2",
+    "request": "^2.87.0",
+    "rpi-gpio": "^1.0.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
+  }
+}
